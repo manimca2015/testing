@@ -46,7 +46,7 @@ export default function Home() {
 
         <nav className="main-nav" aria-label="Main navigation">
           <a href="#kitchens">The kitchens</a>
-          <a href="#our-table">Our table</a>
+          <a href="#about">About us</a>
           <a href="#visit">Find us</a>
         </nav>
 
@@ -100,6 +100,29 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="table-section" id="about" aria-labelledby="about-title">
+          <div className="table-image">
+            <Image
+              src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1400&q=85"
+              alt="Warmly lit restaurant tables ready for a lively meal"
+              fill
+              sizes="(max-width: 760px) 100vw, 48vw"
+              className="cover-image"
+            />
+            <span className="table-image-tag">STAY A WHILE</span>
+          </div>
+          <div className="table-copy">
+            <span className="table-mark" aria-hidden="true">M</span>
+            <h2 id="about-title">Good food brings us together.</h2>
+            <p>
+              Market Club brings neighborhood kitchens together under one roof. Find a new favorite, then meet back at the table.
+            </p>
+            <a className="underlined-link" href="#kitchens">
+              Get to know the kitchens <ArrowRight aria-hidden="true" size={17} />
+            </a>
+          </div>
+        </section>
+
         <div className="hall-ribbon" aria-label="Good food, good company, room for one more">
           <span>GOOD FOOD</span><i aria-hidden="true">*</i>
           <span>GOOD COMPANY</span><i aria-hidden="true">*</i>
@@ -139,29 +162,6 @@ export default function Home() {
                 </div>
               </article>
             ))}
-          </div>
-        </section>
-
-        <section className="table-section" id="our-table" aria-labelledby="table-title">
-          <div className="table-image">
-            <Image
-              src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1400&q=85"
-              alt="Warmly lit restaurant tables ready for a lively meal"
-              fill
-              sizes="(max-width: 760px) 100vw, 48vw"
-              className="cover-image"
-            />
-            <span className="table-image-tag">STAY A WHILE</span>
-          </div>
-          <div className="table-copy">
-            <span className="table-mark" aria-hidden="true">M</span>
-            <h2 id="table-title">Your table.<br />Your kind of night.</h2>
-            <p>
-              Catch up over lunch, bring the whole crew, or make a date of dinner. There is always room to pull up a chair.
-            </p>
-            <a className="underlined-link" href="#visit">
-              A place for the whole crew <ArrowRight aria-hidden="true" size={17} />
-            </a>
           </div>
         </section>
 
