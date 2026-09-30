@@ -753,12 +753,26 @@ a:focus-visible {
 
 @media (max-width: 900px) {
   .site-header {
-    min-height: 76px;
+    min-height: 0;
     grid-template-columns: 1fr auto;
+    row-gap: 12px;
+    padding-top: 14px;
   }
 
   .main-nav {
-    display: none;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    padding-block: 12px;
+    border-top: 1px solid var(--line);
+    font-size: 12px;
+  }
+
+  .header-link {
+    grid-column: 2;
+    grid-row: 1;
   }
 
   .hero-section {
@@ -812,7 +826,8 @@ a:focus-visible {
   }
 
   .site-header {
-    min-height: 70px;
+    min-height: 0;
+    padding-top: 12px;
   }
 
   .wordmark {
@@ -826,6 +841,11 @@ a:focus-visible {
   .header-link {
     gap: 5px;
     font-size: 12px;
+  }
+
+  .main-nav {
+    padding-block: 11px;
+    font-size: 11px;
   }
 
   .hero-section {
@@ -873,11 +893,18 @@ a:focus-visible {
   }
 
   .hall-ribbon {
-    min-height: 52px;
-    justify-content: flex-start;
-    overflow: hidden;
-    white-space: nowrap;
+    min-height: 58px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px 10px;
+    overflow: visible;
+    padding-inline: 12px;
+    white-space: normal;
     font-size: 9px;
+  }
+
+  .hall-ribbon span:last-of-type {
+    display: none;
   }
 
   .kitchens-section {
